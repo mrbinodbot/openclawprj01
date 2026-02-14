@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create venv",
+      "type": "shell",
+      "command": "python3 -m venv venv",
+      "problemMatcher": []
+    },
+    {
+      "label": "Install dev dependencies",
+      "type": "shell",
+      "command": "./venv/bin/python -m pip install --upgrade pip && ./venv/bin/pip install black ruff pytest",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "./venv/bin/pytest -q",
+      "problemMatcher": []
+    },
+    {
+      "label": "Format (black)",
+      "type": "shell",
+      "command": "./venv/bin/black .",
+      "problemMatcher": []
+    }
+  ]
+}
